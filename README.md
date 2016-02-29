@@ -20,16 +20,16 @@ changed in each file since your last “good” commit.
 The actual RottenPotatoes starter app you will use is in another
 repo: `saasbook/rottenpotatoes-rails-intro`.  Fork that repo, then clone
 your fork onto your development computer:
-
-`cd ~/workspace`
-`git clone https://github.com:`YOUR_USER_NAME`/rottenpotatoes-rails-intro.git`
-
+```
+cd ~/workspace
+git clone https://github.com:`YOUR_USER_NAME`/rottenpotatoes-rails-intro.git
+```
 Put your work under version control, create a repo on GitHub for your work,
 name your new GitHub repo `hw2`,
 and push your initial repo to GitHub.
 
 ```
-cd rottenpotatoes-rails-intro
+cd ~/workspace/rottenpotatoes-rails-intro
 git init
 git add .
 git commit -m "Initial commit immediately after forking and cloning HW2 skeleton"
