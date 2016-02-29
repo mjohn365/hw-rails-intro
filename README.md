@@ -117,17 +117,17 @@ Finally, we deploy our app to Heroku:
 Is the app running on Heroku?  No, because just as we ran `rake db:migrate`
 and `rake db:seed` to do first-time database creation locally, we must also cause
 a database to be created on the Heroku side:
+```
+heroku run rake db:migrate
+heroku run rake db:seed
+```
+Now you should be able to navigate to your app's URL.
+(You can issue `heroku apps:info` if you need a reminder of your app's Web URL.)
 
-`heroku run rake db:migrate`
-and
-`heroku run rake db:seed`
-
-Now you should be able to navigate to your app's URL.  `heroku open`
-opens your browser to that URL in case you forgot it.
-
-**Note:** don't proceed past this point until you are able to complete
-the above successfully, or you won't be able to complete this
-assignment!
+**Note:** If you encounter problems deploying and running your app on Heroku, try to get help,
+as you'll need to deploy to Heroku to complete this assignment.
+If assistance isn't available, you can proceed with Part 1 below,
+but try to resolve your Heroku issues as soon as possible.
 
 # Part 1: Sort the list of movies (15 points)
 
