@@ -22,7 +22,7 @@ repo: `saasbook/rottenpotatoes-rails-intro`.  Fork that repo, then clone
 your fork onto your development computer:
 ```
 cd ~/workspace
-git clone https://github.com:`YOUR_USER_NAME`/rottenpotatoes-rails-intro.git
+git clone https://github.com/***YOUR_USER_NAME***/rottenpotatoes-rails-intro.git
 ```
 Put your work under version control, create a repo on GitHub for your work,
 name your new GitHub repo `hw2`,
@@ -33,7 +33,7 @@ cd ~/workspace/rottenpotatoes-rails-intro
 git init
 git add .
 git commit -m "Initial commit immediately after forking and cloning HW2 skeleton"
-git remote add origin https://github.com/YOUR_USER_NAME/hw2.git
+git remote add origin https://github.com/***YOUR_USER_NAME***/hw2.git
 git push -u origin master
 ```
 
