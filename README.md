@@ -17,16 +17,30 @@ changed in each file since your last “good” commit.
 
 ## Preparation: get RottenPotatoes running locally
 
-The actual RottenPotatoes starter app you will use is in another public
+The actual RottenPotatoes starter app you will use is in another
 repo: `saasbook/rottenpotatoes-rails-intro`.  Fork that repo, then clone
 your fork onto your development computer:
 
-`git clone git@github.com:`yourusername`/rottenpotatoes-rails-intro`
+`cd ~/workspace`
+`git clone https://github.com:`YOUR_USER_NAME`/rottenpotatoes-rails-intro.git`
+
+Put your work under version control, create a repo on GitHub for your work,
+name your new GitHub repo `hw2`,
+and push your initial repo to GitHub.
+
+```
+cd rottenpotatoes-rails-intro
+git init
+git add .
+git commit -m "Initial commit immediately after forking and cloning HW2 skeleton"
+git remote add origin https://github.com/YOUR_USER_NAME/hw2.git
+git push -u origin master
+```
 
 Whenever you start working on a Rails project, the first thing you
 should do is to run Bundler, to make sure all the app's gems are
-installed.  Switch to the app's root directory (presumably
-`rails-intro`) and run `bundle install --without production` (you only
+installed.  Make sure you're in the app's root directory (presumably
+`rottenpotatoes-rails-intro`) and run `bundle install --without production` (you only
 need to specify `--without production` the first time, as this setting
 will be remembered on future runs of Bundler for this project).
 
@@ -51,10 +65,17 @@ app needs to run:
 
 * Self-check: what seed data was inserted and where was it specified?
 (Hint: `rake -T db:seed` explains the seed task; `rake -T` explains
-other available Rake tasks)
+other available Rake tasks.)
 
-At this point you should be able to run the app locally (`rails server`)
-and navigating to `http://localhost:3000/movies` in your browser.  If you are using c9, use 'rails s -p $PORT -b $IP' and navigate to the link generated within c9.
+At this point you should be able to run the app locally (`rails server -b $IP -p $PORT` in Cloud9)
+and navigate to the link generated within c9. **Note: If you are seeing the default Rails Welcome page,
+you will need to append `/movies` to the end of your URL.**
+
+Now, assuming all is working as expected, would be a good time to commit your setup work so far.
+Also, you'll need to have your changes committed before deploy to Heroku (the next step).
+Make sure you have no untracked files that are necessary components of your app,
+by checking the results of `git status`. If necessary, add any new files with `git add <filename>`
+or `git add .`. Then do a `git commit -a -m "Database setup complete."`
 
 ## Preparation: deploy to Heroku
 
@@ -93,8 +114,8 @@ Finally, we deploy our app to Heroku:
     Are you sure you want to continue connecting (yes/no)? 
     Please type 'yes' or 'no':
 
-Is the app running on Heroku?  No, because just as we ran `rake
-db:migrate` and `rake db:seed` to do first-time database creation locally, we must also cause
+Is the app running on Heroku?  No, because just as we ran `rake db:migrate`
+and `rake db:seed` to do first-time database creation locally, we must also cause
 a database to be created on the Heroku side:
 
 `heroku run rake db:migrate`
