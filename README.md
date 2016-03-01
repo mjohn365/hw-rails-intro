@@ -17,16 +17,15 @@ changed in each file since your last “good” commit.
 
 ## Preparation: get RottenPotatoes running locally
 
-The actual RottenPotatoes starter app you will use is in another
-repo: `saasbook/rottenpotatoes-rails-intro`.  Fork that repo, then clone
-your fork onto your development computer:
+The actual RottenPotatoes starter app you will use is in another repo:
+[`saasbook/rottenpotatoes-rails-intro`](https://github.com/saasbook/rottenpotatoes-rails-intro).
+Fork that repo, then clone your fork onto your development computer:
 ```
 cd ~/workspace
 git clone https://github.com/YOUR_USER_NAME/rottenpotatoes-rails-intro.git
+cd rottenpotatoes-rails-intro
 ```
-~~Put your work under version control, create a repo on GitHub for your work,~~
-~~name your new GitHub repo **`hw2`**,~~
-~~and push your initial repo to GitHub.~~
+This repo is already under version control, which you can confirm by issuing: `git status`.
 
 Whenever you start working on a Rails project, the first thing you
 should do is to run Bundler, to make sure all the app's gems are
@@ -37,7 +36,10 @@ will be remembered on future runs of Bundler for this project).
 
 Finally, get the local database created:
 
-`bundle exec rake db:migrate`
+`rake db:migrate`
+
+(If you get an error and it suggests prepending `bundle exec`, do that, as follows:
+`bundle exec rake db:migrate`.)
 
 * Self-check: how does Rails decide where and how to create the
 development database?  (Hint: check the `db` subdirectory)
@@ -52,7 +54,7 @@ place this file under version control.**
 ...And insert "seed data" into the database--initial data items that the
 app needs to run:
 
-`bundle exec rake db:seed`
+`rake db:seed`
 
 * Self-check: what seed data was inserted and where was it specified?
 (Hint: `rake -T db:seed` explains the seed task; `rake -T` explains
@@ -70,20 +72,7 @@ or `git add .`. Then do a `git commit -a -m "Database setup complete."`
 
 ## Preparation: deploy to Heroku
 
-If you have deployed to Heroku before, just create a new app container
-with `heroku create`.  If this is your first time deploying to Heroku,
-you will need to do two things.  First, sign up for a free [Heroku
-account](http://heroku.com).  Then set up `ssh` keys to securely
-communicate with Heroku for app deployments.  The three basic commands
-you need are the following, but see the Heroku page for more details.
-
-```
-ssh-keygen -t rsa
-heroku login
-heroku keys:add
-```
-
-Once your keys are set up (a one-time process), you should be able to create an "app
+If you have deployed to Heroku before, just create an "app
 container" on Heroku into which you'll deploy RottenPotatoes:
 
 `heroku create`
