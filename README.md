@@ -46,7 +46,7 @@ will be remembered on future runs of Bundler for this project).
 
 Finally, get the local database created:
 
-`rake db:migrate`
+`bundle exec rake db:migrate`
 
 * Self-check: how does Rails decide where and how to create the
 development database?  (Hint: check the `db` subdirectory)
