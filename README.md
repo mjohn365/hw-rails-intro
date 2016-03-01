@@ -28,17 +28,6 @@ git clone https://github.com/YOUR_USER_NAME/rottenpotatoes-rails-intro.git
 ~~name your new GitHub repo **`hw2`**,~~
 ~~and push your initial repo to GitHub.~~
 
-~~
-```
-cd ~/workspace/rottenpotatoes-rails-intro
-git init
-git add .
-git commit -m "Initial commit immediately after forking and cloning HW2 skeleton"
-git remote add origin https://github.com/YOUR_USER_NAME/hw2.git
-git push -u origin master
-```
-~~
-
 Whenever you start working on a Rails project, the first thing you
 should do is to run Bundler, to make sure all the app's gems are
 installed.  Make sure you're in the app's root directory (presumably
