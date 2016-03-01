@@ -24,10 +24,9 @@ your fork onto your development computer:
 cd ~/workspace
 git clone https://github.com/YOUR_USER_NAME/rottenpotatoes-rails-intro.git
 ```
-~~
-Put your work under version control, create a repo on GitHub for your work,
-name your new GitHub repo **`hw2`**,
-and push your initial repo to GitHub.~~
+~~Put your work under version control, create a repo on GitHub for your work,~~
+~~name your new GitHub repo **`hw2`**,~~
+~~and push your initial repo to GitHub.~~
 
 ~~
 ```
