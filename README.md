@@ -24,6 +24,7 @@ your fork onto your development computer:
 cd ~/workspace
 git clone https://github.com/YOUR_USER_NAME/rottenpotatoes-rails-intro.git
 ```
+~~
 Put your work under version control, create a repo on GitHub for your work,
 name your new GitHub repo **`hw2`**,
 and push your initial repo to GitHub.
@@ -36,6 +37,7 @@ git commit -m "Initial commit immediately after forking and cloning HW2 skeleton
 git remote add origin https://github.com/YOUR_USER_NAME/hw2.git
 git push -u origin master
 ```
+~~
 
 Whenever you start working on a Rails project, the first thing you
 should do is to run Bundler, to make sure all the app's gems are
@@ -61,7 +63,7 @@ place this file under version control.**
 ...And insert "seed data" into the database--initial data items that the
 app needs to run:
 
-`rake db:seed`
+`bundle exec rake db:seed`
 
 * Self-check: what seed data was inserted and where was it specified?
 (Hint: `rake -T db:seed` explains the seed task; `rake -T` explains
